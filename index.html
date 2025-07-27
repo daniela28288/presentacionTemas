@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pseudoclases CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="slide">
+    <h2 class="titulo-subrayado">
+        <span class="blanco">Pseudoclases en</strong></span>
+        <span class="amarillo">CSS</span>
+    </h2>
+
+    <p>Una <strong>pseudoclase</strong> CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, <code>:hover</code> aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.</p>
+
+    <div class="images">
+        <img src="img/ejemplo1.png" alt="">
+    </div>
+
+    <button class="btn">Botón</button>
+
+    <p>Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como:</p>
+
+    <ul>
+      <li><code>:visited</code> → historial del navegador</li>
+      <li><code>:checked</code> → estado de elementos de formulario</li>
+      <li><code>:hover</code> → posición del ratón</li>
+    </ul>
+
+    <br><br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">Hablemos de</span>
+        <span class="amarillo">:has()</span>
+    </h1>
+
+    <p>Probablemente, una de las más potentes. En CSS, cuando damos estilo, el elemento objetivo es el último en el selector.</p>
+
+    <p>Por ejemplo, en este caso el elemento al que se le da estilo es <code>.element</code>, siempre y cuando esté dentro de un <code>.container</code>:</p>
+
+    <div class="images">
+      <img src="img/ejemplo2.png" alt="Ejemplo has()">
+    </div>
+
+    <!-- CODIGO DEL EJEMPLO -->
+    <div class="contenedor">
+        <p>Soy el contenedor :)</p>
+        <div class="elemento">
+            <p>Soy un elemento dentro de un contenedor ;)</p>
+        </div>
+    </div>
+
+    <div class="elemento">
+        <p>Soy un elemento suelto :(</p>
+    </div>
+    <!-- FIN DEL EJEMPLO -->
+
+    <br><br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">El <strong>combinador</strong></span>
+        <span class="amarillo">:has()</span>
+    </h1>
+    <p>El combinador o pseudoclase :has() permite seleccionar un elemento contenedor, siempre y cuando sus elementos hijos (descendientes) cumplan los criterios indicados por los parámetros de :has(), lo que comunmente siempre se ha denominado el selector padre.</p>
+
+    <br>
+    <div class="images">
+        <img src="img/ejemplo3.png" alt="">
+    </div>
+    <br>
+
+    <a class="anchor" href="">
+        ancla sin imagen
+    </a>
+
+    <!-- EN ESTA ANCLA APLICA EL :HAS -->
+    <a class="anchor" href="">
+        <img src="img/icono.png" alt="imagen">
+        ancla con imagen
+    </a>
+
+    <br>
+
+    <ul>
+      <li>En el primer caso, aplicamos estilos a TODOS los enlaces </li>
+      <li>En el segundo caso, aplicamos estilos a todos los enlaces que contengan una imagen</li>
+    </ul>
+    
+    <p>Sin embargo, recuerda que podemos añadir más selectores antes, después o el interior del :has(), consiguiendo criterios más complejos y potentes.</p>
+
+    <br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">Selector de estados </strong></span>
+        <span class="amarillo">:has()</span>
+    </h1>
+
+    <p>Quizás el detalle más interesante del combinador o selector :has() es que lo podemos utilizar para controlar estados de ciertos elementos de la página. Para ello, podemos utilizar pseudoclases como :checked o :hover, por ejemplo.
+
+    El siguiente ejemplo permite cambiar el diseño de un elemento, dependiendo de una casilla que no tiene relación directa:.</p>
+
+    <p>Esto abre la puerta a interacciones dinámicas puramente con CSS, sin depender de JavaScript para detectar acciones del usuario.</p>
+
+    <br>
+    <div class="images">
+        <img src="img/ejemplo4.png" alt="">
+    </div>
+    <br>
+    <!-- ejemplo un poco mas avanzado -->
+    <label>
+    <input type="checkbox" />
+    Activar opción A
+    </label>
+
+    <label>
+    <input type="checkbox" checked />
+    Activar opción B
+    </label>
+
+    <label>
+    <input type="checkbox" />
+    Activar opción C
+    </label>
+
+    <!-- fin del ejemplo -->
+    <br>
+
+    <p>Este patrón es especialmente útil en formularios o interfaces interactivas, donde se desea mostrar visualmente un estado activo o seleccionado, y tradicionalmente requería JavaScript para lograrse.</p>
+
+    
+    <div class="cuadro-info">
+        <p>
+            Observa que gracias a <span class="azul">:has()</span>, ahora es posible realizar este tipo de comportamiento de forma declarativa y limpia directamente desde el <span class="azul">CSS. </span>
+        </p>
+    </div>
+
+    <br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">Selector contextual</strong></span>
+        <span class="amarillo">:has()</span>
+    </h1>
+
+    <div class="acordeon">
+    <section>
+        <input type="radio" name="acordeon" id="section1" checked />
+        <label for="section1">Sección 1</label>
+        <div class="content">
+        <p>Contenido de la sección 1.</p>
+        </div>
+    </section>
+
+    <section>
+        <input type="radio" name="acordeon" id="section2" />
+        <label for="section2">Sección 2</label>
+        <div class="content">
+        <p>Contenido de la sección 2.</p>
+        </div>
+    </section>
+
+    <section>
+        <input type="radio" name="acordeon" id="section3" />
+        <label for="section3">Sección 3</label>
+        <div class="content">
+        <p>Contenido de la sección 3.</p>
+        </div>
+    </section>
+    </div>
+
+        <br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">Detalles importantes sobre</strong></span>
+        <span class="amarillo">:has()</span>
+    </h1>
+
+    <p>Algunos detalles interesantes sobre la pseudoclase funcional :has():</p>
+
+    <ul>
+        <li>La pseudoclase <span class="azul">:has()</span> no se puede anidar dentro de otra <span class="azul">:has()</span>.</li>
+        <li>Los pseudoelementos, como <span class="azul">::before</span> o <span class="azul">::after</span>, no funcionan dentro de <span class="azul">:has()</span>.</li>
+        <li>La especificidad de <span class="azul">:has()</span> es el valor más alto de los selectores indicados por parámetro.</li>
+    </ul>
+
+    <br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">Ahora hablemos de </strong></span>
+        <span class="amarillo">:root</span>
+    </h1>
+
+    <p>La pseudoclase <span class="azul">:root</span> selecciona el elemento raíz del documento.
+    En HTML, eso significa que :root selecciona al <html>, pero es más específica que usar html directamente.</p>
+
+
+    <p><h4>Su principal ventaja:</h4></p>
+    <p>
+    👉 Se usa mucho para definir variables CSS globales, porque esas variables se pueden heredar fácilmente en todo el documento.</p>
+
+    <p><h4>Sintaxis básica</h4></p>
+
+    <div class="images">
+        <img  src="img/ejemplo6.png" alt="">
+    </div>
+
+    <p><h4>¿Cómo se usan las variables?</h4></p>
+    <p>Para usar el valor de una variable, se utiliza la función <span class="azul">var(...)</span>.</p>
+
+    <div class="images">
+        <img src="img/ejemplo7.png" alt="">
+    </div>
+
+    <p>Con var(), puedes definir un valor alternativo si la variable no está declarada.</p>
+
+    <div class="images">
+        <img src="img/ejemplo8.png" alt="">
+    </div>
+  
+    <p>Las variables se suelen definir en <span class="azul">:root</span> porque así están disponibles globalmente en todo el documento CSS. Es como un archivo de configuración visual que puedes usar en todo tu sitio.</p>
+
+    <br>
+    <section class="tema-wrapper">
+  <div class="tema-control">
+    <label class="switch">
+      <input type="checkbox" id="switch-tema" />
+      <span class="slider"></span>
+      <span>Modo oscuro</span>
+    </label>
+
+    <section class="tema-panel">
+      <h2>Modo oscuro con CSS</h2>
+      <p>Este panel cambia el tema al marcar el interruptor de arriba.</p>
+    </section>
+  </div>
+</section>
+
+    <br>
+    <h1 class="titulo-subrayado">
+        <span class="blanco">Sistema de</span>
+        <span class="amarillo">Grid en CSS</span>
+    </h1>
+
+    <p>CSS Grid Layout es un sistema bidimensional de diseño web que nos permite crear interfaces web utilizando filas y columnas. Es muy potente, flexible y adecuado para todo tipo de estructuras.</p>
+
+    <p><strong>¿Por qué usar Grid?</strong></p>
+    <ul>
+      <li>Permite diseñar en filas y columnas simultáneamente.</li>
+      <li>Evita el uso excesivo de floats o flex anidados.</li>
+      <li>Ideal para maquetaciones de estructura compleja.</li>
+    </ul>
+
+    <div class="cuadro-info">
+        <p>Para usar Grid necesitas aplicar <code>display: grid;</code> al contenedor. Luego defines cómo se comportan sus columnas o filas hijas con propiedades como <code>grid-template-columns</code>, <code>grid-template-rows</code>, etc.</p>
+    </div>
+
+    <h4 class="titulo-subrayado">
+      <span class="blanco">Ejemplo</span>
+    </h4>
+
+    <div class="images">
+        <img src="img/ejemplo9.png" alt="">
+    </div>
+
+    <p>Este ejemplo define un contenedor con 3 columnas de igual tamaño. Cada elemento hijo se coloca automáticamente en la siguiente celda libre.</p>
+
+    <br>
+    <section class="ejemplo">
+        <div class="grid-basico">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </section>
+    <br>
+
+    <section class="ejemplo">
+    <h2>Grid con áreas definidas</h2>
+    <p>
+        Es una forma de asignar nombres visuales a las zonas del grid. Esto nos permite ubicar elementos en áreas específicas del diseño de manera clara, legible y ordenada.
+    </p>
+
+    <p>
+        <h4>¿Qué es grid-template-areas?</h4> 
+        Es una propiedad de CSS Grid que permite nombrar las áreas del grid con palabras clave, como si dibujaras un esquema o mapa del diseño.
+
+    </p>
+
+    <div class="images">
+        <img src="img/ejemplo10.png" alt="">
+    </div>
+        <div class="grid-areas">
+            <header>Encabezado</header>
+            <nav>Menú</nav>
+            <main>Contenido</main>
+            <aside>Lateral</aside>
+            <footer>Pie</footer>
+        </div>
+    </section>
+
+    <br>
+    <h2 class="titulo-subrayado">
+      <span class="blanco">Grid y</span>
+      <span class="amarillo">subgrid</span>
+    </h2>
+
+    <p>Cuando usamos display: grid, podemos colocar elementos hijos en celdas específicas. Pero si esos elementos tienen nietos (es decir, un grid dentro de otro), normalmente ese segundo grid es independiente del primero.
+
+        Con subgrid, el grid del hijo hereda las líneas de filas o columnas del grid padre. Así podemos alinear fácilmente contenido anidado.</p>
+
+
+    <p>Nota: <code>subgrid</code> aún no es compatible con todos los navegadores. Debemos verificar la compatibilidad antes de usarlo en producción.</p>
+
+    <div class="cuadro-info">
+      <p><strong>Consejo:</strong> Combinar Grid con otras técnicas como Flexbox es lo mas viablen para adaptarnos mejor a diferentes necesidades.</p>
+    </div>
+
+    <h4>Ejemplo</h4>
+    <section class="grid-container">
+    <article class="card">
+        <h3>Tarjeta 1</h3>
+        <p>Este es un párrafo más largo con varias líneas para probar la alineación.</p>
+    </article>
+    <article class="card">
+        <h3>Tarjeta 2</h3>
+        <p>Texto más corto.</p>
+    </article>
+    </section>
+
+  </div>
+</body>
+</html>
