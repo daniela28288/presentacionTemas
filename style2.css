@@ -352,3 +352,37 @@ label:has(input:checked) {
   border-radius: 10px;
 }
 
+
+
+.actividad-final {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.actividad-final h2 {
+  font-size: 1.5rem;
+  color: #dd6fa6;
+}
+
+.actividad-final code {
+  background: #222;
+  color: #FFEA00; /* Amarillo brillante para destacar */
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+}
+
+.actividad-final pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  margin-top: 1rem;
+}

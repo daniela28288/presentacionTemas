@@ -322,6 +322,60 @@
     </article>
     </section>
 
+
+<section class="actividad-final">
+  <h2>Actividad</h2>
+  <p>
+    En esta actividad práctica aplicarás todos los conceptos vistos: <strong>grid, subgrid, grid-template-areas, ejes, propiedades, y pseudoclases modernas</strong>. Deberás construir una mini-página web con los siguientes requerimientos:
+  </p>
+
+  <h3>Objetivo:</h3>
+  <p>
+    Crear un diseño responsivo que simule una tarjeta de presentación de un evento cultural, aplicando <strong>grid</strong> para organizar las secciones principales y <strong>subgrid</strong> en una parte interna del diseño.
+  </p>
+
+  <h3>Requisitos:</h3>
+  <ol>
+    <li>Utilizar una estructura <code>grid</code> principal que tenga al menos <strong>3 áreas</strong>: encabezado, contenido, y pie de página.</li>
+    <li>En la sección de contenido, crear un artículo o bloque con una lista de expositores o participantes y aplicar <code>subgrid</code> para que los ítems internos se alineen con el contenedor padre.</li>
+    <li>Usar <code>:root</code> para declarar variables de color y espaciamiento.</li>
+    <li>Aplicar <code>:has()</code> para cambiar el estilo de un bloque cuando contenga al menos un expositor destacado (usa una clase como <code>.destacado</code> para ese fin).</li>
+    <li>Agregar <code>grid-template-areas</code> para definir claramente las zonas.</li>
+    <li>Usar <code>gap</code>, <code>justify-content</code>, y <code>align-items</code> correctamente.</li>
+  </ol>
+
+  <h3>Diseño esperado:</h3>
+  <p>Debe tener una distribución clara similar a la siguiente:</p>
+  <pre>
+  +-----------------------------+
+  |        Encabezado          |
+  +-------------+-------------+
+  |   Lista de  |   Imagen o   |
+  |  ponentes   |   info del   |
+  |   (grid)    |   evento     |
+  +-------------+-------------+
+  |     Pie de página          |
+  +-----------------------------+
+  </pre>
+
+  <br>
+
+  <h3>Entregable:</h3>
+  <p>Un archivo HTML y un CSS externo. El código debe estar comentado para explicar cada parte. Se evaluará:</p>
+  <ul>
+    <li>Claridad del código</li>
+    <li>Correcto uso de grid y subgrid</li>
+    <li>Uso de pseudoclases</li>
+    <li>Creatividad en el diseño</li>
+  </ul>
+
+  <h3>Tiempo estimado:</h3>
+  <p>60 minutos.</p>
+
+  <h3>Tip:</h3>
+  <p>Puedes basarte en los ejemplos anteriores del documento.</p>
+</section>
+
   </div>
 </body>
 </html>
